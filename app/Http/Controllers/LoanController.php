@@ -15,7 +15,8 @@ class LoanController extends Controller
     public function index()
     {
         $loans = Loan::all();
-        return view('loans.index', compact('loans'));
+        $users = User::all();
+        return view('loans.index', compact('loans', 'users'));
     }
 
     /**

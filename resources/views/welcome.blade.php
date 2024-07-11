@@ -21,7 +21,7 @@
 
                     <div class="mt-4 flex items-end justify-between">
                         <div>
-                            <h4 class="text-title-md font-bold text-black dark:text-white">
+                            <h4 class="text-title-md font-bold text-white dark:text-black">
                                 6
                             </h4>
                             <span class="text-sm font-medium">Total cars</span>
@@ -60,7 +60,7 @@
 
                     <div class="mt-4 flex items-end justify-between">
                         <div>
-                            <h4 class="text-title-md font-bold text-black dark:text-white">
+                            <h4 class="text-title-md font-bold text-white dark:text-black">
                                 5
                             </h4>
                             <span class="text-sm font-medium">Total loans</span>
@@ -96,7 +96,7 @@
 
                     <div class="mt-4 flex items-end justify-between">
                         <div>
-                            <h4 class="text-title-md font-bold text-black dark:text-white">
+                            <h4 class="text-title-md font-bold text-white dark:text-black">
                                 2
                             </h4>
                             <span class="text-sm font-medium">Total types</span>
@@ -135,7 +135,7 @@
 
                     <div class="mt-4 flex items-end justify-between">
                         <div>
-                            <h4 class="text-title-md font-bold text-black dark:text-white">
+                            <h4 class="text-title-md font-bold text-white dark:text-black">
                                 6
                             </h4>
                             <span class="text-sm font-medium">Total Users</span>

@@ -6,6 +6,7 @@ use App\Http\Controllers\ProductController;
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\LoanController;
 use App\Http\Controllers\TypeController;
+use App\Http\Controllers\UserController;
 use Illuminate\Support\Facades\Route;
 
 
@@ -30,6 +31,8 @@ Route::middleware('auth')->group(function () {
     Route::resource('types', TypeController::class);
     Route::resource('cars', CarController::class);
     Route::resource('loans', LoanController::class);
+
+    Route::resource('users', UserController::class);
 });
 
 require __DIR__ . '/auth.php';

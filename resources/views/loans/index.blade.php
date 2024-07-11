@@ -1,6 +1,3 @@
-<div>
-    <!-- Nothing in life is to be feared, it is only to be understood. Now is the time to understand more, so that we may fear less. - Marie Curie -->
-</div>
 @extends('_layouts.main')
 
 @section('content')
@@ -39,7 +36,7 @@
 
             <div class="flex flex-col gap-10">
                 <div class="rounded-sm border border-stroke bg-white shadow-default">
-                    <div class="grid grid-cols-6 border-t border-stroke px-4 py-4.5 md:px-6 2xl:px-7.5">
+                    <div class="grid grid-cols-8 border-t border-stroke px-4 py-4.5 md:px-6 2xl:px-7.5">
                         <div class="col-span-1 flex items-center">
                             <p class="font-medium">Car</p>
                         </div>
@@ -58,13 +55,13 @@
                         <div class="col-span-1 flex items-center">
                             <p class="font-medium">Status</p>
                         </div>
-                        <div class="col-span-1 flex items-center">
+                        <div class="col-span-2 flex items-center justify-center">
                             <p class="font-medium">Actions</p>
                         </div>
                     </div>
 
                     @foreach ($loans as $loan)
-                        <div class="grid grid-cols-6 border-t border-stroke px-4 py-4.5 md:px-6 2xl:px-7.5">
+                        <div class="grid grid-cols-8 border-t border-stroke px-4 py-4.5 md:px-6 2xl:px-7.5">
                             <div class="col-span-1 flex items-center">
                                 <p class="text-sm font-medium text-black">
                                     {{ $loan->car->name }}
@@ -72,7 +69,7 @@
                             </div>
                             <div class="col-span-1 flex items-center">
                                 <p class="text-sm font-medium text-black">
-                                    {{ $loan->user->name }}
+                                    {{ $loan->user->username }}
                                 </p>
                             </div>
                             <div class="col-span-1 flex items-center">
@@ -91,22 +88,28 @@
                                 </p>
                             </div>
                             <div class="col-span-1 flex items-center">
-                                <p class="text-sm font-medium text-black">
+                                <span
+                                    class="px-3 py-1 text-xs font-medium rounded-full
+                                    @if ($loan->status === 'Active') bg-green-100 text-green-800
+                                    @elseif($loan->status === 'Returned') bg-blue-100 text-blue-800
+                                    @else bg-gray-100 text-gray-800 @endif">
                                     {{ $loan->status }}
-                                </p>
+                                </span>
                             </div>
-                            <div class="col-span-1 flex items-center">
-                                <div class="flex items-center space-x-1">
-                                    <a href="{{ route('loans.edit', $loan->id) }}"
-                                        class="inline-flex items-center rounded-md bg-yellow-50 px-2 py-1 text-xs font-medium text-yellow-800 ring-1 ring-inset ring-yellow-600/20">Edit</a>
-                                    <form action="{{ route('loans.destroy', $loan->id) }}" method="POST">
-                                        @csrf
-                                        @method('DELETE')
-                                        <button type="submit"
-                                            class="inline-flex items-center rounded-md bg-red-50 px-2 py-1 text-xs font-medium text-red-800 ring-1 ring-inset ring-red-600/20"
-                                            onclick="return confirm('Are you sure you want to delete?')">Delete</button>
-                                    </form>
-                                </div>
+                            <div class="col-span-2 flex items-center justify-center space-x-3">
+                                <a href="{{ route('loans.edit', $loan->id) }}"
+                                    class="inline-flex items-center rounded-md bg-yellow-50 px-2 py-1 text-xs font-medium text-yellow-800 ring-1 ring-inset ring-yellow-600/20">
+                                    Edit
+                                </a>
+                                <form action="{{ route('loans.destroy', $loan->id) }}" method="POST" class="inline">
+                                    @csrf
+                                    @method('DELETE')
+                                    <button type="submit"
+                                        class="inline-flex items-center rounded-md bg-red-50 px-2 py-1 text-xs font-medium text-red-800 ring-1 ring-inset ring-red-600/20"
+                                        onclick="return confirm('Are you sure you want to delete?')">
+                                        Delete
+                                    </button>
+                                </form>
                             </div>
                         </div>
                     @endforeach
