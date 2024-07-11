@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Car;
+use App\Models\Type;
 use Illuminate\Http\Request;
 
 class CarController extends Controller
@@ -21,7 +22,9 @@ class CarController extends Controller
      */
     public function create()
     {
-        return view('cars.create');
+        $types = Type::all();
+
+        return view('cars.create', compact('types'));
     }
 
     /**
@@ -56,7 +59,9 @@ class CarController extends Controller
      */
     public function edit(Car $car)
     {
-        return view('cars.edit', compact('car'));
+        $types = Type::all();
+
+        return view('cars.edit', compact('car', 'types'));
     }
 
     /**
