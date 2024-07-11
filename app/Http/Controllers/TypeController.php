@@ -12,7 +12,8 @@ class TypeController extends Controller
      */
     public function index()
     {
-        //
+        $types = Type::all();
+        return view('types.index', compact('types'));
     }
 
     /**
@@ -20,7 +21,7 @@ class TypeController extends Controller
      */
     public function create()
     {
-        //
+        return view('types.create');
     }
 
     /**
@@ -28,7 +29,14 @@ class TypeController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $request->validate([
+            'name' => 'required|string|max:255',
+            'description' => 'nullable|string',
+        ]);
+
+        Type::create($request->all());
+
+        return redirect()->route('types.index')->with('success', 'Type created successfully.');
     }
 
     /**
@@ -36,7 +44,7 @@ class TypeController extends Controller
      */
     public function show(Type $type)
     {
-        //
+        return view('types.show', compact('type'));
     }
 
     /**
@@ -44,7 +52,7 @@ class TypeController extends Controller
      */
     public function edit(Type $type)
     {
-        //
+        return view('types.edit', compact('type'));
     }
 
     /**
@@ -52,7 +60,14 @@ class TypeController extends Controller
      */
     public function update(Request $request, Type $type)
     {
-        //
+        $request->validate([
+            'name' => 'required|string|max:255',
+            'description' => 'nullable|string',
+        ]);
+
+        $type->update($request->all());
+
+        return redirect()->route('types.index')->with('success', 'Type updated successfully.');
     }
 
     /**
@@ -60,6 +75,8 @@ class TypeController extends Controller
      */
     public function destroy(Type $type)
     {
-        //
+        $type->delete();
+
+        return redirect()->route('types.index')->with('success', 'Type deleted successfully.');
     }
 }

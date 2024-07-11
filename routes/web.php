@@ -1,8 +1,11 @@
 <?php
 
+use App\Http\Controllers\CarController;
 use App\Http\Controllers\LandingPageController;
 use App\Http\Controllers\ProductController;
 use App\Http\Controllers\ProfileController;
+use App\Http\Controllers\LoanController;
+use App\Http\Controllers\TypeController;
 use Illuminate\Support\Facades\Route;
 
 
@@ -23,6 +26,10 @@ Route::middleware('auth')->group(function () {
     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
 
     Route::get('/products', [ProductController::class, 'index']);
+
+    Route::resource('types', TypeController::class);
+    Route::resource('cars', CarController::class);
+    Route::resource('loans', LoanController::class);
 });
 
 require __DIR__ . '/auth.php';
