@@ -7,7 +7,7 @@
                 <!-- Card Item Start -->
                 <div
                     class="rounded-sm border border-stroke bg-white px-7.5 py-6 shadow-default dark:border-strokedark dark:bg-boxdark">
-                    <div class="flex h-11.5 w-11.5 items-center justify-center rounded-full bg-meta-2 dark:bg-meta-4">
+                    <div class="flex h-11.5 w-11.5 items-center justify-center rounded-full bg-meta-4 dark:bg-meta-2">
                         <svg class="fill-primary dark:fill-white" width="22" height="16" viewBox="0 0 22 16"
                             fill="none" xmlns="http://www.w3.org/2000/svg">
                             <path
@@ -43,7 +43,7 @@
                 <!-- Card Item Start -->
                 <div
                     class="rounded-sm border border-stroke bg-white px-7.5 py-6 shadow-default dark:border-strokedark dark:bg-boxdark">
-                    <div class="flex h-11.5 w-11.5 items-center justify-center rounded-full bg-meta-2 dark:bg-meta-4">
+                    <div class="flex h-11.5 w-11.5 items-center justify-center rounded-full bg-meta-4 dark:bg-meta-2">
                         <svg class="fill-primary dark:fill-white" width="20" height="22" viewBox="0 0 20 22"
                             fill="none" xmlns="http://www.w3.org/2000/svg">
                             <path
@@ -82,7 +82,7 @@
                 <!-- Card Item Start -->
                 <div
                     class="rounded-sm border border-stroke bg-white px-7.5 py-6 shadow-default dark:border-strokedark dark:bg-boxdark">
-                    <div class="flex h-11.5 w-11.5 items-center justify-center rounded-full bg-meta-2 dark:bg-meta-4">
+                    <div class="flex h-11.5 w-11.5 items-center justify-center rounded-full bg-meta-4 dark:bg-meta-2">
                         <svg class="fill-primary dark:fill-white" width="22" height="22" viewBox="0 0 22 22"
                             fill="none" xmlns="http://www.w3.org/2000/svg">
                             <path
@@ -118,7 +118,7 @@
                 <!-- Card Item Start -->
                 <div
                     class="rounded-sm border border-stroke bg-white px-7.5 py-6 shadow-default dark:border-strokedark dark:bg-boxdark">
-                    <div class="flex h-11.5 w-11.5 items-center justify-center rounded-full bg-meta-2 dark:bg-meta-4">
+                    <div class="flex h-11.5 w-11.5 items-center justify-center rounded-full bg-meta-4 dark:bg-meta-2">
                         <svg class="fill-primary dark:fill-white" width="22" height="18" viewBox="0 0 22 18"
                             fill="none" xmlns="http://www.w3.org/2000/svg">
                             <path
