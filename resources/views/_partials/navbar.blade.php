@@ -102,11 +102,11 @@
                     <a class="flex items-center gap-4" href="#" @click.prevent="dropdownOpen = ! dropdownOpen">
                         <span class="hidden text-right lg:block">
                             <span class="block text-sm font-medium text-black dark:text-white">
-                                <div>{{ Auth::user()->name }}</div>
+                                <div></div>
                             </span>
-                            <span class="block text-xs font-medium">Administrator</span>
+                            <span class="block text-xs font-medium">{{ Auth::user()->fullname }}</span>
                         </span>
-
+                    
                         <span class="h-12 w-12 rounded-full">
                             <img src="/src/images/user/user-01.png" alt="User" />
                         </span>
